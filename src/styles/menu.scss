@@ -1,0 +1,353 @@
+.menu-section {
+	overflow-y: hidden;
+	position: relative;
+	width: 100%;
+	display: flex;
+	align-items: flex-start;
+	justify-content: flex-start;
+	z-index: 2 !important;
+
+	.left-side {
+		background-color: #242424;
+		width: calc(100% - 25vw);
+		padding: 5vmax;
+		padding-right: 8vmax;
+		padding-bottom: 3vmax;
+		color: #fff;
+		.title {
+			font-family: "Ubuntu Condensed";
+			text-transform: uppercase;
+			font-size: 60px;
+			font-weight: 400;
+		}
+		.line {
+			height: 1px;
+			width: 30%;
+			background-color: #424242;
+			margin-top: 25px;
+			margin-bottom: 40px;
+		}
+		.menu-items {
+			width: 100%;
+			.item {
+				margin: 60px 0px;
+				.name {
+					font-family: "Ubuntu Condensed";
+					font-size: 36px;
+					text-transform: uppercase;
+					&.special {
+						font-size: 25px;
+					}
+					.price {
+						color: burlywood;
+						font-size: 30px;
+						margin-left: 10px;
+					}
+					margin-bottom: 15px;
+				}
+				.ingredients {
+					color: #ddd;
+					text-transform: uppercase;
+					font-size: 18px;
+				}
+				.qty {
+					color: #ddd;
+					text-transform: uppercase;
+					font-size: 20px;
+				}
+			}
+		}
+	}
+	.right-side {
+		cursor: pointer;
+		position: absolute;
+		right: 0px;
+		width: 25vw;
+		height: 100%;
+		background-color: #000;
+		display: flex;
+		flex-direction: column;
+
+		&:hover {
+			.promo {
+				background-color: burlywood !important;
+				color: black;
+				padding: 4vmax 3vmax;
+			}
+			.image {
+				filter: blur(1px);
+			}
+		}
+
+		.promo {
+			width: 100%;
+			padding: 3vmax;
+			color: white;
+			background-color: #2b3136;
+			transition: 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+			.name {
+				text-transform: uppercase;
+				font-size: 16px;
+				color: burlywood;
+			}
+			.desc {
+				font-family: "Ubuntu Condensed";
+				text-transform: uppercase;
+				font-size: 34px;
+			}
+		}
+		.image {
+			width: 100%;
+			height: 100%;
+			top: 0px;
+			left: 0px;
+			background-size: cover;
+			background-position: center;
+			filter: blur(0px);
+		}
+	}
+}
+
+.fixed-section {
+	padding: 12vmax 8vmax;
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	background-image: url("./../assets/images/floating_bg_3.jpg"),
+		url("./../assets/images/overlay.png");
+	background-blend-mode: overlay;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	.title {
+		font-size: 60px;
+		font-family: "Ubuntu Condensed";
+		text-transform: uppercase;
+		color: #fff;
+		text-align: center;
+	}
+	.line {
+		width: 20%;
+		height: 1px;
+		background-color: #646464;
+		margin: 30px 0px;
+	}
+	.text {
+		text-align: center;
+		font-size: 30px;
+		font-weight: 400;
+		text-transform: uppercase;
+		color: #eee;
+		line-height: 150%;
+		font-family: "Ubuntu Condensed";
+		span {
+			color: burlywood;
+		}
+	}
+}
+
+.drinks-section {
+	position: relative;
+	width: 100%;
+	display: flex;
+	align-items: flex-start;
+	justify-content: flex-start;
+	.left-side {
+		display: flex;
+		align-items: stretch;
+		justify-content: flex-start;
+		background-color: #242424;
+		width: calc(100% - 25vw);
+		color: #fff;
+		.desc {
+			width: 50%;
+			background-color: #2b3136;
+			display: flex;
+			align-items: flex-start;
+			justify-content: center;
+			flex-direction: column;
+			.title {
+				font-family: "Ubuntu Condensed";
+				text-transform: uppercase;
+				font-size: 60px;
+				margin-bottom: 25px;
+				font-weight: 400;
+			}
+			.line {
+				height: 1px;
+				width: 60%;
+				background-color: #424242;
+				margin-top: -10px;
+				margin-bottom: 60px;
+			}
+			.text {
+				font-family: "Ubuntu Condensed";
+				font-size: 16px;
+				line-height: 200%;
+				color: #aaa9a9;
+			}
+		}
+		.drink-items {
+			background-color: #24292d;
+			width: 50%;
+			padding: 3vmax;
+			display: flex;
+			align-items: flex-start;
+			justify-content: center;
+			flex-direction: column;
+			font-size: 40px;
+			text-align: center;
+		}
+	}
+	.right-side {
+		position: absolute;
+		right: 0px;
+		width: 25vw;
+		height: 100%;
+		background-color: #000;
+		.background {
+			width: 100%;
+			height: 100%;
+			top: 0px;
+			left: 0px;
+			background-size: cover;
+			background-position: center;
+		}
+	}
+}
+
+// XXX: Offers
+.offers {
+	display: flex;
+	align-items: stretch;
+	justify-content: flex-start;
+	width: 100%;
+
+	.offer {
+		flex: 1;
+		.top {
+			height: 30vh;
+			width: 100%;
+			background-size: cover;
+			background-position: center;
+		}
+		.text {
+			color: #fff;
+			padding: 3vmax;
+			text-transform: uppercase;
+			font-family: "Ubuntu Condensed";
+			font-size: 28px;
+
+			span {
+				font-size: 25px;
+				color: burlywood;
+				display: block;
+				margin-bottom: 5px;
+			}
+		}
+	}
+
+	#offer1 {
+		background-image: url("./../assets/images/chicken.jpg");
+	}
+	#offer2 {
+		background-image: url("./../assets/images/offer_4.jpg");
+	}
+	#offer3 {
+		background-image: url("./../assets/images/offer_3.jpg");
+	}
+}
+
+@media screen and (max-width: 1024px) {
+	.menu-section,
+	.drinks-section {
+		flex-direction: column;
+		.left-side {
+			width: 100% !important;
+			.title {
+				font-size: 50px;
+			}
+			.slogan {
+				font-size: 16px;
+			}
+			.images {
+				img {
+					height: 18vw;
+				}
+			}
+		}
+		.right-side {
+			position: relative !important;
+			width: 100% !important;
+			height: 60vh !important;
+		}
+	}
+	.fixed-section,
+	.fixed-section-2 {
+		background-attachment: scroll;
+		.line {
+			width: 50%;
+		}
+		.title {
+			font-size: 40px;
+		}
+		.text {
+			font-size: 20px;
+		}
+	}
+	.drinks-section .left-side {
+		flex-direction: column;
+		.desc {
+			width: 100%;
+		}
+		.drink-items {
+			width: 100%;
+			padding: 10vmax;
+			.title {
+				font-size: 40px;
+			}
+			.line {
+				width: 30%;
+				margin-bottom: 30px;
+			}
+		}
+	}
+	.offers .offer .text {
+		padding: 5vmax;
+	}
+}
+@media screen and (max-width: 768px) {
+	.offers {
+		flex-wrap: wrap;
+		.offer {
+			width: 100% !important;
+		}
+	}
+
+	.menu-section {
+		flex-direction: column;
+		.left-side {
+			width: 100% !important;
+			padding: 5vmax;
+			.title {
+				font-size: 45px;
+			}
+			.menu-items .item {
+				margin: 40px 0px;
+				.name {
+					font-size: 28px;
+					.price {
+						font-size: 24px;
+					}
+				}
+				.ingredients {
+					font-size: 14px;
+				}
+			}
+		}
+		.right-side .promo {
+			padding: 5vmax;
+		}
+	}
+}
